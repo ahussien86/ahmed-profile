@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حمادة | الصفحة الشخصية</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #74ABE2, #5563DE);
+      color: #fff;
+      text-align: center;
+      transition: all 0.5s ease;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    .social-links {
+      margin-top: 30px;
+    }
+    .social-links a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .social-links a:hover {
+      color: #FFD700;
+    }
+    .lang-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #FFD700;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .lang-btn:hover {
+      background: #fff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="profile.jpg" alt="" class="profile-pic">
+    
+    <h1 id="name">احمد حسين احمد</h1>
+    <p id="bio">
+      طالب في كلية الهندسة ✨<br>
+      بحب التكنولوجيا، البرمجة، وكل جديد في عالم الذكاء الاصطناعي 🤖.<br>
+      هنا هشارك مشاريعي وأفكاري 💡.
+    </p>
+
+    <div class="social-links">
+      <a id="fb" href="https://www.facebook.com/" target="_blank">فيسبوك</a>
+      <a id="gh" href="https://github.com/" target="_blank">جيت هب</a>
+      <a id="mail" href="mailto:yourmail@example.com">الإيميل</a>
+    </div>
+
+    <button class="lang-btn" onclick="toggleLang()">English</button>
+  </div>
+
+  <script>
+    let currentLang = "ar";
+    function toggleLang() {
+      if (currentLang === "ar") {
+        document.getElementById("name").innerText = "Ahmed Hussein Ahmed";
+        document.getElementById("bio").innerHTML = `
+          Engineering student ✨<br>
+          Passionate about technology, coding, and everything new in AI 🤖.<br>
+          Here I share my projects and ideas 💡.
+        `;
+        document.getElementById("fb").innerText = "Facebook";
+        document.getElementById("gh").innerText = "GitHub";
+        document.getElementById("mail").innerText = "Email";
+        document.querySelector(".lang-btn").innerText = "العربية";
+        currentLang = "en";
+      } else {
+        document.getElementById("name").innerText = "احمد حسين احمد";
+        document.getElementById("bio").innerHTML = `
+          طالب في كلية الهندسة ✨<br>
+          بحب التكنولوجيا، البرمجة، وكل جديد في عالم الذكاء الاصطناعي 🤖.<br>
+          هنا هشارك مشاريعي وأفكاري 💡.
+        `;
+        document.getElementById("https://www.facebook.com/ahussien111").innerText = "فيسبوك";
+        document.getElementById("gh").innerText = "جيت هب";
+        document.getElementById("a.hussien8686@gmail.com").innerText = "الإيميل";
+        document.querySelector(".lang-btn").innerText = "English";
+        currentLang = "ar";
+      }
+    }
+  </script>
+</body>
+</html>
